@@ -1,106 +1,66 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anthony DeSantis | Cybersecurity Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0b0c10;
-      color: #c5c6c7;
-    }
-    header {
-      background-color: #1f2833;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      color: #66fcf1;
-    }
-    nav {
-      text-align: center;
-      margin: 10px;
-    }
-    nav a {
-      color: #45a29e;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    .project {
-      border: 1px solid #45a29e;
-      border-radius: 8px;
-      padding: 15px;
-      margin-bottom: 20px;
-      background-color: #1f2833;
-    }
-    .project h3 {
-      margin-top: 0;
-      color: #66fcf1;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #888;
-    }
-  </style>
+  <title>Anthony DeSantis | Cybersec Automation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/your-kit.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Anthony DeSantis</h1>
-    <p>Emerging Cybersecurity Analyst | Blue Team Automation | Python | Security Projects</p>
+    <img src="assets/profile.jpg" alt="Profile photo" class="profile-img" />
+    <h1 id="typed"></h1>
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
-  <nav>
-    <a href="#projects">Projects</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a href="#blog">Blog</a>
-  </nav>
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>KPI Dashboard (Streamlit)</h3>
-      <p>A Streamlit dashboard that visualizes key sales performance metrics using Python and Pandas. It features interactive filters and charts for actionable insights.</p>
-      <p><a href="https://github.com/TooManyTonys/KPI-Dashboard" target="_blank">View on GitHub</a></p>
-    </div>
-    <div class="project">
-      <h3>AI SOC Bot Outline</h3>
-      <p>A conceptual outline and codebase for an AI-powered SOC bot that could assist in log parsing, alert correlation, and automated response suggestions.</p>
-      <p><a href="https://github.com/TooManyTonys/AI-Soc-Bot-Outline" target="_blank">View on GitHub</a></p>
-    </div>
-  </section>
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi! I'm Anthony, an aspiring cybersecurity analyst with a focus on SOC tools, log analysis, and automation. I'm currently building hands-on projects using Python, Streamlit, and log data to explore how security teams detect and respond to threats. I'm passionate about learning in public and documenting my growth in the field.</p>
-  </section>
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📧 Email: toomanytony@gmail.com</p>
-    <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/anthony-desantis-jr-23a3a4174" target="_blank">Anthony DeSantis</a></p>
-    <p>💻 GitHub: <a href="https://github.com/TooManyTonys" target="_blank">TooManyTonys</a></p>
-  </section>
-  <section id="blog">
-    <h2>Blog</h2>
-    <article>
-      <h3>Why I’m Focusing on Blue Team Automation</h3>
-      <p><strong>Published:</strong> July 14, 2025</p>
-      <p>Cybersecurity is evolving rapidly, and so are the threats organizations face daily. After spending time studying SOC operations, alert triage, and incident response workflows, I noticed one thing in common: much of the work can be automated. That realization is what led me to pursue Blue Team Automation.</p>
-      <p>I believe that the future of effective cybersecurity lies in empowering defenders with better tools. Blue Team Automation is about writing scripts, building dashboards, and creating smart systems that handle repetitive tasks — letting analysts focus on what matters most: making decisions and staying ahead of threats.</p>
-      <p>My goal is to build tools that simplify log analysis, enrich alerts with context, and present security insights in a meaningful way. I've already started exploring this through projects like my KPI dashboard and early work on a SOC bot. As I continue learning, I plan to document my process openly and share tools that could help other analysts do their jobs more efficiently.</p>
-      <p>This is just the beginning. If you're also passionate about defensive security and automation, let’s connect!</p>
-    </article>
-  </section>
+
+  <main>
+    <section id="about">
+      <h2>Hi, I'm Anthony</h2>
+      <p>Cybersec & Automation Engineer—passionate about security toolchains & live monitoring.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Log Parser</h3>
+          <p>Python Streamlit app to parse logs and detect anomalies.</p>
+          <a href="https://github.com/TooManyTonys/..." target="_blank">View Code</a>
+        </div>
+        <div class="card">
+          <h3>Web Scanner</h3>
+          <p>JS/Node script automating XSS & SQLi test scans.</p>
+          <a href="https://github.com/TooManyTonys/..." target="_blank">View Code</a>
+        </div>
+        <!-- Add more project cards as needed -->
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/your-id" method="POST">
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" placeholder="Your message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div class="links">
+        <a href="https://github.com/TooManyTonys"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/anthony-desantis"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </section>
+  </main>
+
   <footer>
-    <p>&copy; 2025 Anthony DeSantis. Built with HTML & GitHub Pages.</p>
+    © 2025 Anthony DeSantis
   </footer>
 </body>
 </html>
